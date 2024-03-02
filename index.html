@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReTro Forum</title>
+    <!-- daisy ui and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font mulish and inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+        <!-- row CSS -->
+    <style>
+        .inter {
+            font-family: "Inter", sans-serif;
+        }
+
+        .mulish {
+            font-family: "Mulish", sans-serif;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header class="mt-10">
+        <!-- nav ber -->
+        <div class=" flex  justify-between items-center mx-32">
+            <div>
+                <a class="btn btn-ghost text-4xl mulish font-black">ReTro</a>
+            </div>
+            <div class=" hidden lg:flex gap-8">
+                <ul class="flex gap-5">
+                    <li class="tooltip" data-tip="Home"><button class="btn rounded-full bg-[#12132d11]"><img
+                                src="./images/icon/home.png" alt=""></button></li>
+                    <li class="tooltip" data-tip="Write"><button class="btn rounded-full bg-[#12132d11]"><img
+                                src="./images/icon/pen.png" alt=""></button></li>
+                    <li class="tooltip" data-tip="Add Friend"><button class="btn rounded-full bg-[#12132d11]"><img
+                                src="./images/icon/add.png" alt=""></button></li>
+                    <li class="tooltip" data-tip="Flag"><button class="btn rounded-full bg-[#12132d11]"><img
+                                src="./images/icon/flag.png" alt=""></button></li>
+                </ul>
+
+                <a class="btn bg-[#797DFC] rounded-[50px] px-8">Sign In</a>
+            </div>
+        </div>
+    </header>
 </body>
+
 </html>
