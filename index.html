@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-
+<html lang="en" >
+    <!-- data-theme="light" -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
 
-        <!-- row CSS -->
+    <!-- row CSS -->
     <style>
         .inter {
             font-family: "Inter", sans-serif;
@@ -29,14 +29,14 @@
 </head>
 
 <body>
-    <header class="mt-10">
+    <header class="mt-10 mulish mx-5 lg:mx-32">
         <!-- nav ber -->
-        <div class=" flex  justify-between items-center mx-32">
+        <div class=" flex  justify-between items-center ">
             <div>
-                <a class="btn btn-ghost text-4xl mulish font-black">ReTro</a>
+                <a class="btn btn-ghost text-4xl  font-black">ReTro</a>
             </div>
-            <div class=" hidden lg:flex gap-8">
-                <ul class="flex gap-5">
+            <div class=" flex gap-8">
+                <ul class="hidden lg:flex gap-5">
                     <li class="tooltip" data-tip="Home"><button class="btn rounded-full bg-[#12132d11]"><img
                                 src="./images/icon/home.png" alt=""></button></li>
                     <li class="tooltip" data-tip="Write"><button class="btn rounded-full bg-[#12132d11]"><img
@@ -47,9 +47,31 @@
                                 src="./images/icon/flag.png" alt=""></button></li>
                 </ul>
 
-                <a class="btn bg-[#797DFC] rounded-[50px] px-8">Sign In</a>
+                <a class="btn bg-[#797DFC] rounded-[50px] px-8 text-white text-xl ">Sign In</a>
             </div>
         </div>
+
+        <!-- banner part -->
+        <section class="bg-[url('./images/bgbanner.png')] bg-no-repeat bg-cover bg-[#12132D]  flex flex-col lg:flex-row justify-between items-center lg:p-24 p-6 rounded-[32px] mt-14 space-y-8 gap-5">
+            <div class="text-white space-y-8 ">
+                <h1 class="lg:text-6xl lg:leading-[70px] text-2xl  font-black ">Welcome to the <br>
+                    <span class="bg-gradient-to-r from-[#797DFC] to-[#303064] inline-block text-transparent bg-clip-text">ReTro</span>
+                     Forum</h1>
+                <p class="taxt-base lg:text-xl text-[#FFFFFFCC]">Share your favorite opinion and win and wp forum coffee mug!</p>
+                <!-- input field -->
+                <label class="input  flex items-center   rounded-[50px] py-4 lg:py-8 text-base mt-2 ">
+                    <input type="text" class="grow " placeholder="Search" />
+                    <!-- search button -->
+                    <button class="hover:bg-gray-700 p-2  lg:px-5 rounded-[46px] bg-[#797DFC] text-white text-sm lg:text-xl">Search</button>
+                </label>
+            </div>
+            <div class="bg-white rounded-[32px] p-8 lg:p-12 text-black font-medium text-base lg:text-2xl space-y-2 ">
+                <p class="flex justify-between items-center gap-10"><span>Registered Users</span><span>01</span></p>
+                <p class="flex justify-between items-center"><span>Forum</span><span>02</span></p>
+                <p class="flex justify-between items-center"><span>Topics</span><span>05</span></p>
+                <p class="flex justify-between items-center"><span>Replies</span><span>01</span></p>
+            </div>
+        </section>
     </header>
 </body>
 
