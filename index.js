@@ -15,7 +15,7 @@ function allPosts(posts) {
         div.innerHTML = `
         <div class="card card-side bg-[#F3F3F5] shadow-xl mb-10 p-5">
 
-           <div class="avatar online w-24 h-24">
+           <div class="avatar online w-24 h-24" id="${post.id}">
             <div class=" rounded-full">
               <img src="${post.image}" />
             </div>
@@ -46,7 +46,7 @@ function allPosts(posts) {
                      </div>
                 </div>
                 <div class="card-actions justify-end">
-                    <button id="${post.id}">
+                    <button>
                        <img src="./images/icon/letter.png" alt="inbox">
                     </button>
                 </div>
@@ -55,8 +55,22 @@ function allPosts(posts) {
         </div>
         `;
         postContainer.appendChild(div);
+
+        isActive(post.isActive,post.id);
     }
 };
 
+// check the author is active or not
+function isActive (value,id){
+    const Status = document.getElementById(id);
 
+    if(value ){
+        Status.classList.add("online");
+        Status.classList.remove("offline");
+    }
+    else{
+        Status.classList.remove("online");
+        Status.classList.add("offline");
+    }
+}
 PostDetails();
