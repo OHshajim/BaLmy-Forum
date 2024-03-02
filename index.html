@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" >
-    <!-- data-theme="light" -->
+<html lang="en" data-theme="light">
+<!-- data-theme="light" -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,17 +53,22 @@
         </div>
 
         <!-- banner part -->
-        <section class="bg-[url('./images/bgbanner.png')] bg-no-repeat bg-cover bg-[#12132D]  flex flex-col lg:flex-row justify-between items-center lg:p-24 p-6 rounded-[32px] mt-14 space-y-8 gap-5">
+        <section
+            class="bg-[url('./images/bgbanner.png')] bg-no-repeat bg-cover bg-[#12132D]  flex flex-col lg:flex-row justify-between items-center lg:p-24 p-6 rounded-[32px] mt-14 space-y-8 gap-5">
             <div class="text-white space-y-8 ">
                 <h1 class="lg:text-6xl lg:leading-[70px] text-2xl  font-black ">Welcome to the <br>
-                    <span class="bg-gradient-to-r from-[#797DFC] to-[#303064] inline-block text-transparent bg-clip-text">ReTro</span>
-                     Forum</h1>
-                <p class="taxt-base lg:text-xl text-[#FFFFFFCC]">Share your favorite opinion and win and wp forum coffee mug!</p>
+                    <span
+                        class="bg-gradient-to-r from-[#797DFC] to-[#303064] inline-block text-transparent bg-clip-text">ReTro</span>
+                    Forum
+                </h1>
+                <p class="taxt-base lg:text-xl text-[#FFFFFFCC]">Share your favorite opinion and win and wp forum coffee
+                    mug!</p>
                 <!-- input field -->
                 <label class="input  flex items-center   rounded-[50px] py-4 lg:py-8 text-base mt-2 ">
                     <input type="text" class="grow " placeholder="Search" />
                     <!-- search button -->
-                    <button class="hover:bg-gray-700 p-2  lg:px-5 rounded-[46px] bg-[#797DFC] text-white text-sm lg:text-xl">Search</button>
+                    <button
+                        class="hover:bg-gray-700 p-2  lg:px-5 rounded-[46px] bg-[#797DFC] text-white text-sm lg:text-xl">Search</button>
                 </label>
             </div>
             <div class="bg-white rounded-[32px] p-8 lg:p-12 text-black font-medium text-base lg:text-2xl space-y-2 ">
@@ -73,6 +79,27 @@
             </div>
         </section>
     </header>
+    <main class="mt-10 mulish mx-5 lg:mx-32">
+        <section>
+            <h1 class="font-black text-4xl  text-center   ">Let’s Discuss</h1>
+            <p class="text-[#15162e99] inter text-lg    text-center ">Yes, you can run unit tests and view
+                the results directly within the app. The integrated testing features
+                allow for a streamlined .</p>
+
+            <!-- display part -->
+            <div class="flex flex-col lg:flex-row ">
+                <!-- cards -->
+                <div id="post-container">
+                    <!-- all cards -->
+                </div>
+                <div id="selected-card" >
+                    <!-- only selected card -->
+                </div>
+            </div>
+        </section>
+        <!-- js link -->
+        <script src="./index.js"></script>
+    </main>
 </body>
 
 </html>
