@@ -10,10 +10,10 @@ async function PostDetails() {
 
 function allPosts(posts) {
     const postContainer = document.getElementById('post-container');
-    postContainer.innerHTML=""
+    postContainer.innerHTML = ""
     for (const post of posts) {
         const div = document.createElement('div');
-         div.innerHTML=" "
+        div.innerHTML = " "
         div.innerHTML = `
         <div class="card card-side bg-[#F3F3F5] shadow-xl mb-10 p-5">
 
@@ -80,10 +80,10 @@ function isActive(value, id) {
 
 // click to inbox
 let count = 1;
-function inbox( title, view) {
+function inbox(title, view) {
 
     const selectedCardContainer = document.getElementById('selected-card');
-    console.log(title,view  );
+    console.log(title, view);
     const div = document.createElement('div');
     div.innerHTML = `
     <div class="flex justify-between items-center gap-4 bg-white m-5 p-4 rounded-2xl ">
@@ -101,9 +101,9 @@ function inbox( title, view) {
 }
 
 // search part 
- search = async ()=>{
+search = async () => {
     const input = document.getElementById("input-Field");
-    const search =  input.value;
+    const search = input.value;
 
     const res = await fetch(` https://openapi.programming-hero.com/api/retro-forum/posts?category=${search}`)
     const data = await res.json()
@@ -113,7 +113,48 @@ function inbox( title, view) {
 
     allPosts(posts);
 
-
 }
 
+// latest post 
+const latestPost = async () => {
+    const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts')
+    const data = await res.json()
+    console.log(data);
+    latestPostDisplay(data)
+}
+const latestPostDisplay = (posts) => {
+    const postContainer = document.getElementById('latestPostContainer');
+    posts.forEach(post => {
+        const div = document.createElement('div');
+        div.innerHTML = `
+        <div class="card  p-7 border border-[#12132D26] rounded-3xl mulish ">
+        <figure><img src="${post.cover_image}" alt="cover" class="rounded-3xl" /></figure>
+         <div class="space-y-3">
+          <div class="flex items-center gap-3 mt-3">
+            <img src="./images/icon/vedio.png" alt="icon">
+            <p>${post.author.posted_date ? post.author.posted_date:'No publish date' }</p>
+          </div>
+          <h2 class="font-bold text-lg  ">${post.title}</h2>
+          <p class="text-[#12132D99]">${post.description}</p>
+
+          <div class="flex gap-4 items-center mt-3">
+              <div class="avatar">
+              <div class="w-12 rounded-full">
+                  <img src="${post.profile_image}" />
+              </div>
+              </div>
+                <div class="space-y-1">
+                <h2 class="text-[#12132D] font-bold ">${post.author.name }</h2> 
+                <p class="text-[#12132D99] text-[14px] ">${post.author.designation ? post.author.designation:'Unknown'}</p>
+                </div>
+          </div>
+         </div>
+        </div>
+        `;
+        postContainer.appendChild(div);
+    });
+}
+
+// call function
 PostDetails();
+latestPost()

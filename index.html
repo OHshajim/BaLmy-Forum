@@ -65,7 +65,7 @@
                     mug!</p>
                 <!-- input field -->
                 <label class="input  flex items-center   rounded-[50px] py-4 lg:py-8 text-base mt-2 text-black">
-                    <input type="text" class="grow " placeholder="Search" id="input-Field"/>
+                    <input type="text" class="grow " placeholder="Search" id="input-Field" />
                     <!-- search button -->
                     <button onclick="search()"
                         class="hover:bg-gray-700 p-2  lg:px-5 rounded-[46px] bg-[#797DFC] text-white text-sm lg:text-xl">Search</button>
@@ -79,7 +79,8 @@
             </div>
         </section>
     </header>
-    <main class="mt-16 mulish mx-5 lg:mx-32">
+    <main class="mt-16 mulish mx-5 lg:mx-32 ">
+        <!-- discuss part -->
         <section>
             <h1 class="font-black text-4xl  text-center   ">Let’s Discuss</h1>
             <p class="text-[#15162e99] inter text-lg    text-center mt-5 ">Yes, you can run unit tests and view
@@ -98,21 +99,61 @@
 
                         <div class="flex justify-between items-center ">
                             <h3>Title</h3>
-                             <div class="flex  gap-3 items-center">
-                                 <img src="./images/icon/right.png" alt="icon">
-                                 <p>Mark as read (0<span id="countPlus">0</span>)</p>
+                            <div class="flex  gap-3 items-center">
+                                <img src="./images/icon/right.png" alt="icon">
+                                <p>Mark as read (0<span id="countPlus">0</span>)</p>
                             </div>
                         </div>
-    
+
                         <!-- only selected card -->
-    
+
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- forum part -->
+        <section class="bg-[#12132D] rounded-[32px] flex flex-col lg:flex-row justify-between items-center p-10 mulish my-24">
+            <div class="text-white p-10  ">
+                <h1 class="text-4xl font-black">Join Our Forum</h1>
+                <p class="text-[#FFFFFFCC] my-4">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app. </p>
+                <a class="btn bg-[#797DFC] rounded-[50px] px-8 text-white text-base sm:text-xl border-none mt-2">Registered Now</a>
+            </div>
+            <div>
+                <img src="./images/joinforum.png" alt="logo">
+            </div>
+        </section>
+
+        <!-- latest part -->
+        <section class="mulish">
+            <h1 class="font-black text-4xl text-center ">Latest Posts</h1>
+            <p class="text-[#15162e99] inter text-lg text-center mt-5 ">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-7 mt-14" id="latestPostContainer"> 
+            <!-- latest post  -->
+            </div>
+        </section>
+
         <!-- js link -->
         <script src="./index.js"></script>
     </main>
+    <footer
+        class=" footer-center p-10 lg:p-32 bg-gradient-to-t from-[#12132d03] to-[#12132d0D] space-y-10 mulish mt-16">
+        <h2 class="text-4xl font-black ">ReTro</h2>
+        <p class="text-base text-[#12132DB3]">
+            develop your skill and your self . Be serious about your career and lets make it better . If you take time
+            to skilled your self then your skill back you the best time .
+        </p>
+        <div class="flex items-center gap-9 justify-center ">
+            <a><img src="./images/icon/x.png" alt=""></a>
+            <a><img src="./images/icon/fb.png" alt=""></a>
+            <a><img src="./images/icon/insta.png" alt=""></a>
+            <a><img src="./images/icon/git.png" alt=""></a>
+        </div>
+        <hr>
+        <p class="font-light text-[#12132D80]">Copyright © 2024 - All right reserved</p>
+    </footer>
 </body>
 
 </html>
+
