@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReTro Forum</title>
+    <title>BaLmy Forum</title>
     <!-- daisy ui and tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,6 +26,9 @@
         .mulish {
             font-family: "Mulish", sans-serif;
         }
+        .avatar.offline:before{
+            background: #FF3434;
+        }
     </style>
 </head>
 
@@ -34,7 +37,7 @@
         <!-- nav ber -->
         <div class=" flex  justify-between items-center ">
             <div>
-                <a class="btn btn-ghost text-4xl  font-black">ReTro</a>
+                <a class="btn btn-ghost text-4xl  font-black">BaLmy</a>
             </div>
             <div class=" flex gap-8">
                 <ul class="hidden lg:flex gap-5">
@@ -58,7 +61,7 @@
             <div class="text-white space-y-8 ">
                 <h1 class="lg:text-6xl lg:leading-[70px] text-2xl  font-black ">Welcome to the <br>
                     <span
-                        class="bg-gradient-to-r from-[#797DFC] to-[#303064] inline-block text-transparent bg-clip-text">ReTro</span>
+                        class="bg-gradient-to-r from-[#797DFC] to-[#303064] inline-block text-transparent bg-clip-text">BaLmy</span>
                     Forum
                 </h1>
                 <p class="taxt-base lg:text-xl text-[#FFFFFFCC]">Share your favorite opinion and win and wp forum coffee
@@ -83,11 +86,15 @@
         <!-- discuss part -->
         <section>
             <h1 class="font-black text-4xl  text-center   ">Let’s Discuss</h1>
-            <p class="text-[#15162e99] inter text-lg    text-center mt-5 ">Yes, you can run unit tests and view
+            <p class="text-[#15162e99] inter text-lg    text-center my-5 ">Yes, you can run unit tests and view
                 the results directly within the app. The integrated testing features
                 allow for a streamlined .</p>
 
             <!-- display part -->
+                <div class="hidden justify-center " id="loading">
+                    <span class="loading loading-bars loading-xs "></span>
+                </div>
+
             <div class="flex flex-col lg:flex-row justify-between mt-10 gap-10 ">
                 <!-- cards -->
                 <div id="post-container" class="flex-1">
@@ -139,7 +146,7 @@
     </main>
     <footer
         class=" footer-center p-10 lg:p-32 bg-gradient-to-t from-[#12132d03] to-[#12132d0D] space-y-10 mulish mt-16">
-        <h2 class="text-4xl font-black ">ReTro</h2>
+        <h2 class="text-4xl font-black ">BaLmy</h2>
         <p class="text-base text-[#12132DB3]">
             develop your skill and your self . Be serious about your career and lets make it better . If you take time
             to skilled your self then your skill back you the best time .
