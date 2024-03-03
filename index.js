@@ -2,11 +2,9 @@ async function PostDetails() {
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
     const data = await res.json();
     const posts = data.posts;
-    console.log(posts);
+    // console.log(posts);
     allPosts(posts)
 }
-
-
 
 function allPosts(posts) {
     const postContainer = document.getElementById('post-container');
@@ -85,7 +83,7 @@ let count = 1;
 function inbox(title, view) {
 
     const selectedCardContainer = document.getElementById('selected-card');
-    console.log(title, view);
+    // console.log(title, view);
     const div = document.createElement('div');
     div.innerHTML = `
     <div class="flex justify-between items-center gap-4 bg-white mt-5 p-4 rounded-2xl ">
@@ -103,7 +101,6 @@ function inbox(title, view) {
 }
 
 // search part 
-
 search = async () => {
     Loader(true);
     const input = document.getElementById("input-Field");
@@ -112,8 +109,7 @@ search = async () => {
     const res = await fetch(` https://openapi.programming-hero.com/api/retro-forum/posts?category=${search}`)
     const data = await res.json()
     const posts = data.posts;
-    console.log(data.posts);
-    console.log(search);
+    // console.log(search);
     setTimeout(allPosts,2000,posts)
 
 }
@@ -122,7 +118,7 @@ search = async () => {
 const latestPost = async () => {
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts')
     const data = await res.json()
-    console.log(data);
+    // console.log(data);
     latestPostDisplay(data)
 }
 const latestPostDisplay = (posts) => {
@@ -159,7 +155,6 @@ const latestPostDisplay = (posts) => {
 }
 
 // loading
-
 function Loader (value) {
     const loading = document.getElementById('loading');
     if(value){
