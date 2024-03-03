@@ -88,9 +88,9 @@ function inbox(title, view) {
     console.log(title, view);
     const div = document.createElement('div');
     div.innerHTML = `
-    <div class="flex justify-between items-center gap-4 bg-white m-5 p-4 rounded-2xl ">
-    <h3 class="font-semibold text-base ">${title.replace("@","'")}</h3>
-    <div class="flex gap-2 text-[#12132D99]">
+    <div class="flex justify-between items-center gap-4 bg-white mt-5 p-4 rounded-2xl ">
+    <h3 class="font-bold text-base text-wrap">${title.replace("@","'")}</h3>
+    <div class="flex flex-col sm:flex-row gap-2 text-[#12132D99]">
     <img src="./images/icon/seen.png" alt="view">
     <p>${view}</p>
     </div>
@@ -137,8 +137,8 @@ const latestPostDisplay = (posts) => {
             <img src="./images/icon/vedio.png" alt="icon">
             <p>${post.author.posted_date ? post.author.posted_date : 'No publish date'}</p>
           </div>
-          <h2 class="font-bold text-lg  ">${post.title}</h2>
-          <p class="text-[#12132D99]">${post.description}</p>
+          <h2 class="font-extrabold text-xl  ">${post.title}</h2>
+          <p class="text-[#12132D99] ">${post.description}</p>
 
           <div class="flex gap-4 items-center mt-3">
               <div class="avatar">
