@@ -64,7 +64,7 @@
                 <p class="taxt-base lg:text-xl text-[#FFFFFFCC]">Share your favorite opinion and win and wp forum coffee
                     mug!</p>
                 <!-- input field -->
-                <label class="input  flex items-center   rounded-[50px] py-4 lg:py-8 text-base mt-2 ">
+                <label class="input  flex items-center   rounded-[50px] py-4 lg:py-8 text-base mt-2 text-black">
                     <input type="text" class="grow " placeholder="Search" />
                     <!-- search button -->
                     <button
@@ -79,21 +79,34 @@
             </div>
         </section>
     </header>
-    <main class="mt-10 mulish mx-5 lg:mx-32">
+    <main class="mt-16 mulish mx-5 lg:mx-32">
         <section>
             <h1 class="font-black text-4xl  text-center   ">Let’s Discuss</h1>
-            <p class="text-[#15162e99] inter text-lg    text-center ">Yes, you can run unit tests and view
+            <p class="text-[#15162e99] inter text-lg    text-center mt-5 ">Yes, you can run unit tests and view
                 the results directly within the app. The integrated testing features
                 allow for a streamlined .</p>
 
             <!-- display part -->
-            <div class="flex flex-col lg:flex-row ">
+            <div class="flex flex-col lg:flex-row justify-between mt-10 ">
                 <!-- cards -->
                 <div id="post-container">
                     <!-- all cards -->
                 </div>
-                <div id="selected-card" >
-                    <!-- only selected card -->
+
+                <div>
+                    <div id="selected-card" class="bg-[#12132D0D] p-10 rounded-3xl">
+
+                        <div class="flex justify-between items-center ">
+                            <h3>Title</h3>
+                             <div class="flex  gap-3 items-center">
+                                 <img src="./images/icon/right.png" alt="icon">
+                                 <p>Mark as read (<span id="countPlus">000</span>)</p>
+                            </div>
+                        </div>
+    
+                        <!-- only selected card -->
+    
+                    </div>
                 </div>
             </div>
         </section>

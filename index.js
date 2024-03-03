@@ -46,7 +46,7 @@ function allPosts(posts) {
                      </div>
                 </div>
                 <div class="card-actions justify-end">
-                    <button>
+                    <button onclick="inbox(${post, post.title, post.view_count})">
                        <img src="./images/icon/letter.png" alt="inbox">
                     </button>
                 </div>
@@ -54,23 +54,51 @@ function allPosts(posts) {
                 </div>
         </div>
         `;
+
+
         postContainer.appendChild(div);
 
-        isActive(post.isActive,post.id);
+        isActive(post.isActive, post.id);
+        // inbox(post, post.title, post.view_count)
+
     }
 };
 
 // check the author is active or not
-function isActive (value,id){
+function isActive(value, id) {
     const Status = document.getElementById(id);
 
-    if(value ){
+    if (value) {
         Status.classList.add("online");
         Status.classList.remove("offline");
     }
-    else{
+    else {
         Status.classList.remove("online");
         Status.classList.add("offline");
     }
 }
+
+// click to inbox
+let count = 1;
+function inbox(post, title, view) {
+
+    const selectedCardContainer = document.getElementById('selected-card');
+    // console.log(title,view ,time );
+    const div = document.createElement('div');
+    div.innerHTML = `
+    <div class="flex justify-between items-center gap-4 bg-white m-5 p-4 rounded-2xl ">
+    <h3 class="font-semibold text-base ">${title}</h3>
+    <div class="flex gap-2 text-[#12132D99]">
+    <img src="./images/icon/seen.png" alt="view">
+    <p>${view}</p>
+    </div>
+    </div>
+    `
+    selectedCardContainer.appendChild(div)
+    const countPlus = document.getElementById("countPlus");
+    countPlus.innerText = count;
+    count++
+}
+
+
 PostDetails();
