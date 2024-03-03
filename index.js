@@ -10,9 +10,10 @@ async function PostDetails() {
 
 function allPosts(posts) {
     const postContainer = document.getElementById('post-container');
+    postContainer.innerHTML=""
     for (const post of posts) {
         const div = document.createElement('div');
-
+         div.innerHTML=" "
         div.innerHTML = `
         <div class="card card-side bg-[#F3F3F5] shadow-xl mb-10 p-5">
 
@@ -60,7 +61,6 @@ function allPosts(posts) {
         postContainer.appendChild(div);
 
         isActive(post.isActive, post.id);
-
     }
 };
 
@@ -97,8 +97,23 @@ function inbox( title, view) {
     selectedCardContainer.appendChild(div)
     const countPlus = document.getElementById("countPlus");
     countPlus.innerText = count;
-    count++
+    count++;
 }
 
+// search part 
+ search = async ()=>{
+    const input = document.getElementById("input-Field");
+    const search =  input.value;
+
+    const res = await fetch(` https://openapi.programming-hero.com/api/retro-forum/posts?category=${search}`)
+    const data = await res.json()
+    const posts = data.posts;
+    console.log(data.posts);
+    console.log(search);
+
+    allPosts(posts);
+
+
+}
 
 PostDetails();
