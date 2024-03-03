@@ -63,7 +63,7 @@ function allPosts(posts) {
         
         isActive(post.isActive, post.id);
     }
-    Loader(false)
+    Loader(false,postContainer)
 };
 
 // check the author is active or not
@@ -114,7 +114,8 @@ search = async () => {
     const posts = data.posts;
     console.log(data.posts);
     console.log(search);
-    allPosts(posts)
+    setTimeout(allPosts,2000,posts)
+
 }
 
 // latest post 
@@ -158,18 +159,20 @@ const latestPostDisplay = (posts) => {
 }
 
 // loading
+
 function Loader (value) {
     const loading = document.getElementById('loading');
     if(value){
 
         loading.classList.remove('hidden')
         loading.classList.add('flex')
+
     }
     else{
         loading.classList.remove('flex')
         loading.classList.add('hidden')
     }
-}
+};
 
 // call function
 PostDetails();
