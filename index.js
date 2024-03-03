@@ -12,6 +12,7 @@ function allPosts(posts) {
     const postContainer = document.getElementById('post-container');
     for (const post of posts) {
         const div = document.createElement('div');
+
         div.innerHTML = `
         <div class="card card-side bg-[#F3F3F5] shadow-xl mb-10 p-5">
 
@@ -46,7 +47,7 @@ function allPosts(posts) {
                      </div>
                 </div>
                 <div class="card-actions justify-end">
-                    <button onclick="inbox(${post, post.title, post.view_count})">
+                    <button onclick="inbox( '${post.title}', ${post.view_count})">
                        <img src="./images/icon/letter.png" alt="inbox">
                     </button>
                 </div>
@@ -59,7 +60,6 @@ function allPosts(posts) {
         postContainer.appendChild(div);
 
         isActive(post.isActive, post.id);
-        // inbox(post, post.title, post.view_count)
 
     }
 };
@@ -80,10 +80,10 @@ function isActive(value, id) {
 
 // click to inbox
 let count = 1;
-function inbox(post, title, view) {
+function inbox( title, view) {
 
     const selectedCardContainer = document.getElementById('selected-card');
-    // console.log(title,view ,time );
+    console.log(title,view  );
     const div = document.createElement('div');
     div.innerHTML = `
     <div class="flex justify-between items-center gap-4 bg-white m-5 p-4 rounded-2xl ">
